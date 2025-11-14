@@ -35,7 +35,7 @@ export default function SearchPageContent() {
 	useEffect(() => {
 		const queryString = createQueryString("q", debouncedSearchTerm);
 		router.replace(`/search?${queryString}`);
-	}, [debouncedSearchTerm]);
+	}, [debouncedSearchTerm, createQueryString, router]);
 
 	return (
 		<>

@@ -3,13 +3,10 @@
 import { cn } from "@/lib";
 import { useRouter } from "next/navigation";
 
-import CONFIG from "@/config";
-
 import Button from "@/components/UI/Button";
 import { ChevronLeft } from "@/components/UI/Icon";
 import MobileContainer from "@/components/layout/MobileContainer";
 
-const APP_BAR_MAX_HEIGHT = CONFIG.APP_BAR_MAX_HEIGHT;
 interface AppBarProps extends Omit<React.ComponentProps<"div">, "title"> {
 	title?: string | React.ReactNode;
 	titleClassName?: string;
@@ -44,10 +41,7 @@ export default function AppBar({
 
 	return (
 		<MobileContainer
-			className={cn(
-				"border-b border-zinc-300 bg-white",
-				`max-h-[${APP_BAR_MAX_HEIGHT}px]`
-			)}
+			className={cn("border-b border-zinc-300 bg-white", `max-h-[57px]`)}
 			{...props}
 		>
 			<nav className='grid grid-cols-3 items-center'>
